@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Sharif Photography</title>
+  <meta name="description" content="Landscape, astrophotography, wildlife, wedding, event, and portrait photography portfolio." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">Omar Sharif Photography</a>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Landscape • Astro • Wildlife • Wedding • Events • Portraits</p>
+        <h1>Capturing quiet light, wild moments, and meaningful stories.</h1>
+        <p>Fine-art and documentary photography for nature, celebrations, and personal portraits.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#portfolio">View Portfolio</a>
+          <a class="button" href="#booking">Book a Session</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected Work</h2>
+        <p>Use the filters to view each photography category. Click any image to open it in full screen.</p>
+      </div>
+
+      <div class="filters" aria-label="Portfolio filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="landscape">Landscape</button>
+        <button class="filter" data-filter="astrophotography">Astrophotography</button>
+        <button class="filter" data-filter="wildlife">Wildlife</button>
+        <button class="filter" data-filter="wedding">Wedding</button>
+        <button class="filter" data-filter="events">Events</button>
+        <button class="filter" data-filter="portraits">Portraits</button>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item" data-category="landscape">
+          <img src="images/landscape/landscape-01.jpg" alt="Landscape photograph" loading="lazy" />
+          <figcaption>Landscape</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="astrophotography">
+          <img src="images/astrophotography/astro-01.jpg" alt="Astrophotography image" loading="lazy" />
+          <figcaption>Astrophotography</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="wildlife">
+          <img src="images/wildlife/wildlife-01.jpg" alt="Wildlife photograph" loading="lazy" />
+          <figcaption>Wildlife</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="wedding">
+          <img src="images/wedding/wedding-01.jpg" alt="Wedding photograph" loading="lazy" />
+          <figcaption>Wedding</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="events">
+          <img src="images/events/event-01.jpg" alt="Event photograph" loading="lazy" />
+          <figcaption>Events</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="portraits">
+          <img src="images/portraits/portrait-01.jpg" alt="Portrait photograph" loading="lazy" />
+          <figcaption>Portraits</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Behind the camera</h2>
+      </div>
+      <p>I am a photographer drawn to natural light, open landscapes, night skies, wildlife, and human stories. My work combines patience, observation, and documentary-style storytelling to create images that feel honest and memorable.</p>
+    </section>
+
+    <section id="booking" class="section booking">
+      <div class="section-heading">
+        <p class="eyebrow">Booking</p>
+        <h2>Book a session</h2>
+        <p>For weddings, events, portraits, or custom nature photography requests, send a short message with your preferred date and location.</p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <select name="service" required>
+          <option value="">Select photography type</option>
+          <option>Landscape / Nature</option>
+          <option>Astrophotography</option>
+          <option>Wildlife</option>
+          <option>Wedding</option>
+          <option>Event</option>
+          <option>Portrait</option>
+        </select>
+        <textarea name="message" rows="6" placeholder="Tell me about your session, date, location, and ideas" required></textarea>
+        <button class="button primary" type="submit">Send Inquiry</button>
+      </form>
+      <p class="form-note">Replace <strong>YOUR_FORM_ID</strong> with your free Formspree form ID, or change this to your email link.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">Contact & Social</p>
+      <h2>Let’s connect</h2>
+      <div class="social-links">
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/yourusername/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img src="" alt="Expanded portfolio image" />
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Omar Sharif Photography. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

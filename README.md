@@ -1,42 +1,34 @@
 # Omar Sharif Photography Portfolio
 
-This is a free GitHub Pages-ready photography portfolio website.
+Static portfolio prepared for GitHub Pages. It includes category filters, a keyboard-accessible lightbox, responsive layouts, a booking/contact page, social links, visible watermark overlays, disabled image dragging/right-click, copyright notices, and a local image-preparation workflow.
 
-## Photo folders
-Put optimized JPEG images here:
+## Personalize the site
 
-- `images/featured/hero.jpg`
-- `images/landscape/landscape-01.jpg`
-- `images/astrophotography/astro-01.jpg`
-- `images/wildlife/wildlife-01.jpg`
-- `images/wedding/wedding-01.jpg`
-- `images/events/event-01.jpg`
-- `images/portraits/portrait-01.jpg`
+Edit `assets/js/site-config.js` and replace:
+- email address
+- Instagram/Facebook/YouTube links
+- photographer name, watermark, and biography if needed
 
-You can add more images by copying an existing `<figure class="gallery-item">` block in `index.html` and changing the category and image path.
+## Add photographs safely
 
-## Recommended image settings
-- JPEG format
-- Long edge: 2000 to 2500 px
-- Quality: 80 to 90%
-- File size: ideally under 1 MB each
-- Use lowercase file names with no spaces, such as `wildlife-02.jpg`
+1. Keep original, full-resolution photographs outside the repository or place them in `originals-private/<category>/`. The `.gitignore` prevents this folder from being uploaded.
+2. Install Pillow: `python -m pip install Pillow`
+3. Run `python tools/prepare_images.py`. It creates reduced JPEG copies, strips inherited metadata, adds copyright/artist metadata, and bakes in a subtle visible watermark.
+4. Add each web copy to `assets/js/gallery-data.js` using the examples already there.
+5. Commit only the `images/` web copies—not the originals.
 
-## Booking/contact form
-The booking form currently uses Formspree placeholder URL:
+Recommended web image size: no more than 2,000 pixels on the longest edge and usually under 1 MB.
 
-`https://formspree.io/f/YOUR_FORM_ID`
+## Deploy to GitHub Pages
 
-Create a free Formspree form, then replace `YOUR_FORM_ID` in `index.html`.
-
-## GitHub Pages deployment
-1. Create a new GitHub repository.
-2. Upload all files from this folder, not the folder itself.
-3. Go to repository **Settings > Pages**.
+1. Create a new public GitHub repository.
+2. Upload the contents of this folder so `index.html` is in the repository root.
+3. Open **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch **main** and folder **/root**.
-6. Save.
+5. Select the `main` branch and `/ (root)`, then save.
 
-Your free website URL will look like:
+Your site will appear at `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
 
-`https://yourusername.github.io/repository-name/`
+## Important limitation
+
+Browser protections discourage casual copying but cannot prevent screenshots or determined downloads. Protect originals by publishing only reduced-resolution, watermarked copies.

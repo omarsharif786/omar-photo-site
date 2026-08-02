@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book photography services with Omar Sharif Photography.">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Book a Session | Omar Sharif Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="contact-page">
+  <header class="site-header solid">
+    <a class="brand" href="index.html"><span data-site-name>Omar Sharif</span><small>Photography</small></a>
+    <nav aria-label="Primary navigation"><a href="index.html#portfolio">Portfolio</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a class="active" href="contact.html">Book</a></nav>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-intro">
+      <p class="eyebrow">Booking & contact</p>
+      <h1>Tell me what you are planning.</h1>
+      <p>Complete the form and your email application will open with the inquiry prepared. GitHub Pages cannot process private form submissions by itself, so this approach keeps the site free and does not send your information to a third-party form service.</p>
+      <div class="contact-details">
+        <p><strong>Email</strong><br><a id="direct-email" href="#">Add your email in site-config.js</a></p>
+        <p><strong>Typical work</strong><br>Weddings · Events · Portraits · Prints · Licensing</p>
+      </div>
+      <div class="social-links" id="social-links"></div>
+    </section>
+
+    <form class="booking-form" id="booking-form">
+      <label>Full name<input name="name" autocomplete="name" required></label>
+      <label>Email address<input type="email" name="email" autocomplete="email" required></label>
+      <label>Phone <span>(optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+      <label>Photography service
+        <select name="service" required>
+          <option value="">Select one</option><option>Wedding</option><option>Event</option><option>Portrait</option><option>Print or image licensing</option><option>Other</option>
+        </select>
+      </label>
+      <div class="form-row">
+        <label>Preferred date<input type="date" name="date"></label>
+        <label>Location<input name="location" placeholder="City or venue"></label>
+      </div>
+      <label>Tell me about the project<textarea name="message" rows="7" required placeholder="Share the event, style, estimated hours, and anything important to you."></textarea></label>
+      <button class="button button-primary" type="submit">Prepare email inquiry</button>
+      <p class="form-note">Your information stays in your browser until you choose to send the email.</p>
+    </form>
+  </main>
+
+  <footer><p>© <span id="year"></span> <span data-site-name>Omar Sharif</span> Photography. All rights reserved.</p></footer>
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
